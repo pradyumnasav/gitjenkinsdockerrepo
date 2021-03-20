@@ -1,4 +1,4 @@
-#base image nginx with tag - latest File
+#base image nginx with tag - latest File one
 From nginx:latest
 #Adding custom html file from github
 ADD https://github.com/pradyumnasav/gitjenkinsdockerrepo/blob/main/index1.html /usr/share/nginx/html
