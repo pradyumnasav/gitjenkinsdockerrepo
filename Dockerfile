@@ -1,4 +1,4 @@
-#base image nginx with tag - latest File changed auto build and push to docker
+#base image nginx with tag -  latest File changed auto build and push to docker
 From nginx:latest
 #Adding custom html file from github
 ADD https://github.com/pradyumnasav/gitjenkinsdockerrepo/blob/main/index1.html /usr/share/nginx/html
