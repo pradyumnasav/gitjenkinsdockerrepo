@@ -1,7 +1,9 @@
 #base image nginx with tag -  latest File changed auto build and push to docker
 From nginx:latest
-#Adding custom html file from github
-ADD https://github.com/pradyumnasav/gitjenkinsdockerrepo/blob/main/index1.html /usr/share/nginx/html
-#Adding read permissions to custom index1.html
-RUN chmod -r /usr/share/nginx/html/index1.html
+RUN mkdir -p /home/html
+WORKDIR /home/html
+COPY index.html .
+RUN cp -p index.html /usr/share/nginx/html/
+#Adding read permissions to custom index.html
+#RUN chmod -r /usr/share/nginx/html/index.html
 CMD ["nginx", "-g", "daemon off;"]
